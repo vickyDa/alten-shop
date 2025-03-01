@@ -1,0 +1,68 @@
+:host {
+    display: block;
+    height: 100%;
+    overflow: auto;
+}
+
+.product-card {
+    position: relative;
+}
+
+.product-image-container {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.5em 1em;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.in-stock {
+    background-color: #28a745; 
+}
+
+.out-of-stock {
+    background-color: #dc3545; 
+}
+
+.low-stock {
+    background-color: orange;
+}
+
+.product-details {
+    padding-top: 1em;
+}
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    max-width: 400px; 
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px; 
+    font-size: 1.2rem; 
+    color: #999; 
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; 
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+  }
+  
+  .search-input:focus {
+    border-color: #007bff;
+    outline: none; 
+  }
+  

@@ -1,0 +1,30 @@
+<h1 class="text-center">Contact</h1>
+
+<form #form="ngForm" (ngSubmit)="onSave(emptyContact)">
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input pInputText
+        type="text"
+        id="email"
+        name="email"
+        [(ngModel)]="emptyContact.email"
+        required>
+    </div>
+    <div class="form-field">
+      <label for="message">Message</label>
+      <textarea pInputTextarea
+        appTextCount 
+        id="message"
+        name="message"
+        rows="5" 
+        cols="30" 
+        maxlength="300"
+        [(ngModel)]="emptyContact.message"
+        required>
+      </textarea>
+    </div>      
+    <div class="flex justify-content-between">
+      <p-button type="button" (click)="onCancel()" label="Annuler" severity="help"/>
+      <p-button type="submit" [disabled]="!form.valid" label="Envoyer" severity="success"/>
+    </div>
+  </form>
