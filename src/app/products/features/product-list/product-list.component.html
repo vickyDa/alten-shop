@@ -25,8 +25,7 @@
             <p-card class="product-card block mb-2">
 
                 <div class="product-image-container">
-                    <p-image src="assets/images/{{ product.image }}" alt="{{ product.name }}" width="10%" height="auto" 
-                    (onError)="onImageError($event)"></p-image>
+                    <img src="assets/images/{{ product.image }}" alt="{{ product.name }}" width="10%" height="auto"(error)="onImageError($event)">
                     <span class="badge" [ngClass]="{'in-stock': product.inventoryStatus === 'INSTOCK',
                      'out-of-stock':product.inventoryStatus === 'OUTOFSTOCK',
                      'low-stock':product.inventoryStatus === 'LOWSTOCK'}">

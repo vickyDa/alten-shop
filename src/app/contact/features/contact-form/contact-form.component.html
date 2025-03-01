@@ -1,10 +1,10 @@
 <h1 class="text-center">Contact</h1>
-
+<p-toast></p-toast>
 <form #form="ngForm" (ngSubmit)="onSave(emptyContact)">
     <div class="form-field">
       <label for="email">Email</label>
       <input pInputText
-        type="text"
+        type="email"
         id="email"
         name="email"
         [(ngModel)]="emptyContact.email"

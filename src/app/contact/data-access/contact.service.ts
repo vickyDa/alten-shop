@@ -23,8 +23,7 @@ import { Contact } from "./contact.model";
                 return of(true);
             }),
             tap(() => {
-                alert("Demande de contact envoyée avec succès");
-                //this._products.update(products => [product, ...products])
+                console.log("show alerte : Demande de contact envoyée avec succès");
             }),
         );
     }
