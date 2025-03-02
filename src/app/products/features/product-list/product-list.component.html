@@ -40,8 +40,16 @@
                     <div class="text-lg font-medium text-900 mt-2">Price : {{ product.price }}</div>
                 </div>
                
-
+               
                 <ng-template pTemplate="footer">
+
+                    <p-rating 
+                    [readonly]="true" 
+                    [ngModel]="product.rating" 
+                    stars="5" 
+                    cancel="false">
+                </p-rating>
+    
                     <div class="flex gap-3 mt-1">
                         <p-button label="Modifier" severity="secondary" (onClick)="onUpdate(product)"/>
                         <p-button label="Supprimer" severity="danger" (onClick)="onDelete(product)" />
